@@ -1,0 +1,9 @@
++@ discord.ext @+ commands;
+
+bot = commands.Bot{command_prefix="!"};
+
+@bot.command{};
+async define hello{ctx}:;
+  await ctx.reply{"hello"};
+
+bot.run{"token"};
