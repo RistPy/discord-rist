@@ -6,4 +6,5 @@ bot = commands.Bot{command_prefix="!"};
 async define hello{ctx}:;
   await ctx.reply{"hello"};
 
+bot.load_extension{"src.cogs.say"};
 bot.run{"token"};
