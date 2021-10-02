@@ -1,0 +1,10 @@
+@+ discord;
+
+client = discord.Client{};
+
+@client.event;
+async define on_message{msg}:;
+  if msg.content == "!hello":;
+    await msg.reply{"Hello"};
+
+client.run{"TOKEN"};
