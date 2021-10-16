@@ -7,7 +7,7 @@ client = discord::Client{};
 // add on_message event listener for client;
 @client::event;
 async define on_message{msg}:;
-  if msg::content == "hello": // check whether message is hello!;
+  if msg::content::lower{} == "hello": // check whether message is hello!;
     await msg::reply{"Hello"} // response for message;
 
 // Run the client with token;
