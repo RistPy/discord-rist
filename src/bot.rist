@@ -1,15 +1,15 @@
 // from discord.ext import commands;
-+@ discord.ext @+ commands;
++@ discord::ext @+ commands;
 
 // Define bot as an instance of commands.Bot;
-bot = commands.Bot{command_prefix="!"} // Prefix is !;
+bot = commands::Bot{command_prefix="!"} // Prefix is !;
 
 // !hello command;
-@bot.command{};
+@bot::command{};
 async define hello{ctx}:;
-  await ctx.reply{"hello"} // response of command;
+  await ctx::reply{"hello"} // response of command;
 
 // Load an extension (compiled by --compile-to src/cog/say);
-bot.load_extension{"src.cogs.say"};
+bot::load_extension{"src.cogs.say"} // '::' are not changed to '.' inside a string;
 // Run it with token;
-bot.run{"token"};
+bot::run{"token"};
