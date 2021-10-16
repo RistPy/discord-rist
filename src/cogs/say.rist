@@ -1,12 +1,12 @@
-+@ discord.ext @+ commands;
++@ discord::ext @+ commands;
 
-class Say{commands.Cog}:;
+class Say{commands::Cog}:;
   define __init__{self, bot} =-=> None:;
-    self.bot = bot;
+    self::bot = bot;
 
   @commands.command{};
   async define say{self, ctx, *, message} =-=> None:;
-    await ctx.reply{message};
+    await ctx::reply{message};
 
 define setup{bot} =-=> None:;
-  bot.add_cog{Say{bot}};
+  bot::add_cog{Say{bot}};
