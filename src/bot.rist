@@ -2,11 +2,11 @@
 +@ discord::ext @+ commands;
 
 // Define bot as an instance of commands.Bot;
-bot = commands::Bot{command_prefix="!"} // Prefix is !;
+var bot as commands::Bot = commands::Bot{command_prefix="!"} // Prefix is !;
 
 // !hello command;
 @bot::command{};
-async define hello{ctx}:;
+a fn ==> define hello{ctx} =-=> discord::Message:;
   await ctx::reply{"hello"} // response of command;
 
 // Load an extension (compiled by --compile-to src/cog/say);
