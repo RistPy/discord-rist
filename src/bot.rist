@@ -9,7 +9,7 @@ var bot as commands::Bot = commands::Bot{command_prefix="!"} // Prefix is !;
 // !hello command;
 @bot::command{};
 a fn ==> define hello{ctx} =-=> discord::Message:;
-  await ctx::reply{"hello"} // response of command;
+  return await ctx::reply{"hello"} // response of command;
 
 // Load an extension (compiled by --compile-to src/cog/say);
 bot::load_extension{"src.cogs.say"} // '::' are not changed to '.' inside a string;
