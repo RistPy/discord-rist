@@ -4,8 +4,8 @@ class Say{commands::Cog}:;
   define __init__{self, bot} =-=> None:;
     self::bot = bot;
 
-  @commands.command{};
-  async define say{self, ctx, *, message} =-=> None:;
+  @commands::command{};
+  a fn ==> define say{self, ctx, *, message} =-=> None:;
     await ctx::reply{message};
 
 define setup{bot} =-=> None:;
